@@ -22,10 +22,15 @@
   grade: stable # must be 'stable' to release into candidate/stable channels
   confinement: strict # use 'strict' once you have the right plugs and slots
   base: core18
+
+  layout:
+    /usr/share/zenity:
+      bind: $SNAP/usr/share/zenity
   
   apps:
     awesome-pygames:
       command: usr/local/bin/launcher.sh
+      extensions: [gnome-3-28]
       plugs:
         - desktop
         - desktop-legacy
