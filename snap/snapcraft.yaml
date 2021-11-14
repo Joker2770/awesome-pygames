@@ -25,7 +25,7 @@
   
   apps:
     awesome-pygames:
-      command: launcher.sh
+      command: usr/local/bin/launcher.sh
       plugs:
         - desktop
         - desktop-legacy
@@ -55,8 +55,6 @@
       source-depth: 1
       source-branch: main
       source-type: git
-      stage:
-        - *.*
-      prime:
-        - *.*
+      organize:
+        "*" : usr/local/bin/
       
