@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=20.21.11
+Encoding=UTF-8
+Name=awesome-pygames
+Comment=Games by Al Sweigart. Manual at inventwithpython.com/pygame.
+Exec=awesome-pygames
+Terminal=false
+Type=Application
+Categories=Game
+Icon=${SNAP}/meta/gui/icon.png
