@@ -4,20 +4,20 @@
   version: '20.21.11' # just for humans, typically '1.2+git' or '1.3.2'
   summary: Games by Al Sweigart. Manual at inventwithpython.com/pygame. # 79 char long summary
   description: |
-    flippy "A game like reversi"
-    fourinarow "Get four in a row"
-    gemgem "A tile matching puzzle"
-    inkspill "Flood the screen with pixels"
-    memorypuzzle "Test your memory"
-    pentomino "5 block Tetris"
-    simulate "Repeat the pattern"
-    slidepuzzle "Traditional slide puzzle"
-    squirrel "Eat the smaller squirrels"
-    starpusher "Sokoban"
-    tetromino "Tetris-like game"
-    tetrominoforidiots "Tetris for Idiots"
-    wormy "Snake-like game"
-    website "inventwithpython.com"
+    * flippy "A game like reversi"
+    * fourinarow "Get four in a row"
+    * gemgem "A tile matching puzzle"
+    * inkspill "Flood the screen with pixels"
+    * memorypuzzle "Test your memory"
+    * pentomino "5 block Tetris"
+    * simulate "Repeat the pattern"
+    * slidepuzzle "Traditional slide puzzle"
+    * squirrel "Eat the smaller squirrels"
+    * starpusher "Sokoban"
+    * tetromino "Tetris-like game"
+    * tetrominoforidiots "Tetris for Idiots"
+    * wormy "Snake-like game"
+    * website "inventwithpython.com"
 
   # icon: snap/gui/icon.png
 
