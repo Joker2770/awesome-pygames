@@ -1,6 +1,8 @@
 #!/bin/sh
 # Thanks to KenT for contributions
 
+SCRIPT_DIR=$( cd ${0%/*} && pwd -P )
+
 RET=0
 SOUND=$(zenity --list --width=350 --height=250 --radiolist \
   --title="Choose the Audio Output" \
@@ -50,7 +52,7 @@ while [ $RET -eq 0 ]; do
         sensible-browser "http://inventwithpython.com/pygame"
      else
        if [ "$GAME" != "" ]; then
-          cd /home/$USER/python_games
+          cd "$SCRIPT_DIR"
           python3 $GAME.py
        fi
      fi
