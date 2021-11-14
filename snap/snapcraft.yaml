@@ -19,8 +19,6 @@
     * wormy "Snake-like game"
     * website "inventwithpython.com"
 
-  # icon: snap/gui/icon.png
-
   grade: stable # must be 'stable' to release into candidate/stable channels
   confinement: strict # use 'strict' once you have the right plugs and slots
   base: core18
@@ -58,7 +56,7 @@
       source-branch: main
       source-type: git
       stage:
-        - *
+        - *.*
       prime:
-        - *
+        - *.*
       
