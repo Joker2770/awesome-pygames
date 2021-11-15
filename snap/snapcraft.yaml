@@ -52,7 +52,6 @@
       stage-packages:
         - zenity
       build-packages:
-        - pypy3
         - libsdl2-dev
         - libsdl2-image-dev
         - libsdl2-mixer-dev
