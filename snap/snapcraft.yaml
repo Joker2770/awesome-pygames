@@ -51,7 +51,6 @@
         - pygame
       stage-packages:
         - zenity
-        - python3-pygame
 
     include-all:
       plugin: dump
