@@ -22,9 +22,9 @@
   grade: stable # must be 'stable' to release into candidate/stable channels
   confinement: strict # use 'strict' once you have the right plugs and slots
   base: core18
-  architectures:
-  - build-on: [amd64, i386, armhf, arm64]
-    run-on: [amd64, i386, armhf, arm64]
+  # architectures:
+  # - build-on: [amd64, i386, armhf, arm64]
+    # run-on: [amd64, i386, armhf, arm64]
 
   layout:
     /usr/share/zenity:
@@ -51,7 +51,7 @@
       source-branch: main
       source-type: git
       python-packages:
-        - pygame
+        - pygame == 2.0.0
       stage-packages:
         - zenity
       build-packages:
