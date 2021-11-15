@@ -51,7 +51,7 @@
       source-branch: main
       source-type: git
       python-packages:
-        - pygame == 2.0.0
+        - pygame
       stage-packages:
         - zenity
       build-packages:
