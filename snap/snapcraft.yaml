@@ -29,10 +29,21 @@
   layout:
     /usr/share/zenity:
       bind: $SNAP/usr/share/zenity
+    /usr/share/midi/freepats:
+      bind: $SNAP/usr/share/midi/freepats
+    /etc/timidity:
+      bind: $SNAP/etc/timidity
+    /usr/lib/$SNAPCRAFT_ARCH_TRIPLET/alsa-lib:
+      bind: $SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/alsa-lib
+    /usr/share/alsa:
+      bind: $SNAP/usr/share/alsa
   
   apps:
     awesome-pygames:
+      command-chain: ["snap/command-chain/alsa-launch"]
       command: usr/local/bin/launcher.sh
+      environment:
+        LD_LIBRARY_PATH: ${SNAP}/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/pulseaudio
       extensions: [gnome-3-28]
       plugs:
         - desktop
@@ -41,9 +52,23 @@
         - unity7
         - x11
         - audio-playback
+        - pulseaudio
+        - alsa
     
   parts:
+    alsa-mixin:
+      plugin: dump
+      source: https://github.com/diddlesnaps/snapcraft-alsa.git
+      source-subdir: snapcraft-assets
+      build-packages:
+        - libasound2-dev
+      stage-packages:
+        - libasound2
+        - libasound2-plugins
+        - yad
+
     awesome-pygames:
+      after: [alsa-mixin]
       plugin: python
       python-version: python3
       source: "https://github.com/Joker2770/awesome-pygames.git"
@@ -54,6 +79,14 @@
         - pygame
       stage-packages:
         - zenity
+        - try:
+          - libfluidsynth1
+          - libfluidsynth2
+        - freepats
+        - libmodplug1
+        - libopusfile0
+        - libpulse0
+        - libsndfile1
       build-packages:
         - libsdl2-dev
         - libsdl2-image-dev
@@ -65,6 +98,7 @@
         - python3-setuptools
 
     include-all:
+      after: [awesome-pygames]
       plugin: dump
       source: "https://github.com/Joker2770/awesome-pygames.git"
       source-depth: 1
