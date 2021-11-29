@@ -102,6 +102,14 @@
         - libopusfile0
         - libpulse0
         - libsndfile1
+        - libmad0
+        - libportmidi0
+        - libsdl2-2.0-0
+        - libsdl2-image-2.0-0
+        - libsdl2-mixer-2.0-0
+        - libsdl2-ttf-2.0-0
+        - libxss1
+        - libxxf86vm1
       build-packages:
         - libsdl2-dev
         - libsdl2-image-dev
