@@ -26,6 +26,20 @@
   # - build-on: [amd64, i386, armhf, arm64]
     # run-on: [amd64, i386, armhf, arm64]
 
+  plugs: # plugs for theming, font settings, cursor and to use gtk3 file chooser
+    gtk-3-themes:
+      interface: content
+      target: $SNAP/data-dir/themes
+      default-provider: gtk-common-themes:gtk-3-themes
+    icon-themes:
+      interface: content
+      target: $SNAP/data-dir/icons
+      default-provider: gtk-common-themes:icon-themes
+    sound-themes:
+      interface: content
+      target: $SNAP/data-dir/sounds
+      default-provider: gtk-common-themes:sounds-themes
+
   layout:
     /usr/share/zenity:
       bind: $SNAP/usr/share/zenity
@@ -48,6 +62,7 @@
       plugs:
         - desktop
         - desktop-legacy
+        - gsettings
         - wayland
         - unity7
         - x11
