@@ -94,6 +94,7 @@
         - pygame
       stage-packages:
         - zenity
+        - sensible-utils
         - try:
           - libfluidsynth1
           - libfluidsynth2
