@@ -45,6 +45,8 @@
       bind: $SNAP/usr/share/zenity
     /usr/share/midi/freepats:
       bind: $SNAP/usr/share/midi/freepats
+    /etc/fonts:
+      bind: $SNAP/etc/fonts
     /etc/timidity:
       bind: $SNAP/etc/timidity
     /usr/lib/$SNAPCRAFT_ARCH_TRIPLET/alsa-lib:
