@@ -49,7 +49,7 @@ while [ $RET -eq 0 ]; do
   then
      if [ "$GAME" = "website" ]
      then
-        sensible-browser "http://inventwithpython.com/pygame"
+        $SNAP/usr/bin/sensible-browser "http://inventwithpython.com/pygame"
      else
        if [ "$GAME" != "" ]; then
           cd "$SCRIPT_DIR"
