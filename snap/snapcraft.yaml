@@ -99,9 +99,6 @@
       stage-packages:
         - zenity
         - sensible-utils
-        - try:
-          - libfluidsynth1
-          - libfluidsynth2
         - freepats
         - libmodplug1
         - libopusfile0
